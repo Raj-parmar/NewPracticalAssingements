@@ -1,0 +1,30 @@
+<form [formGroup]="productForm">
+    <div fxLayout="row wrap" fxLayoutGap="10px grid" fxLayout.xs="column" fxLayoutAlign="start">
+        <div fxFlex="33.33%"  fxFlex.lt-md="100" class="mt-1">
+            <label class="custom">Product Name <span>*</span></label>
+            <mat-form-field appearance="outline" class="w-100">
+                <input matInput formControlName="name" />
+            </mat-form-field>
+        </div>
+        <div fxFlex="33.33%"  fxFlex.lt-md="100" class="mt-1">
+            <label class="custom">Image</label>
+            <mat-form-field appearance="outline" class="w-100">
+                <input type="file" matInput formControlName="image" />
+            </mat-form-field>
+        </div>
+        <div fxFlex="33.33%"  fxFlex.lt-md="100" class="mt-1">
+            <label class="custom">Price</label>
+            <mat-form-field appearance="outline" class="w-100">
+                <input matInput type="number" formControlName="price" />
+            </mat-form-field>
+        </div>
+        <div fxFlex="33.33%"  fxFlex.lt-md="100" class="mt-1">
+            <label class="custom">Quantity</label>
+            <mat-form-field appearance="outline" class="w-100">
+                <input matInput type="number" formControlName="quantity"/>
+            </mat-form-field>
+        </div>
+        
+        <button mat-raised-button color="primary" (click)="addProduct()">Add Product</button>
+    </div>
+</form>
